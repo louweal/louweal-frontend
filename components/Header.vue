@@ -3,8 +3,14 @@
     <div class="header__bg absolute left-0 top-0 h-full w-screen"></div>
     <div class="flex justify-between px-6 pt-6 lg:px-6">
       <div class="">
-        Logo <br />
-        glogo
+        <nuxt-link to="/">
+          <img
+            src="@/assets/images/logo.svg"
+            alt="home"
+            width="134"
+            height="38"
+          />
+        </nuxt-link>
       </div>
       <div class="flex">
         <Menu class="hidden lg:flex" />

@@ -1,19 +1,18 @@
 <script setup>
-import { ref } from "vue";
-const menu = ref(null);
+const glob = import.meta.glob("@/assets/data/menus/menu.json", {
+  eager: true,
+});
 
-fetch(`http://louweal.local/wp-json/wp/v2/options/menu`)
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    }
-    throw new Error("Something went wrong");
-  })
-  .then((data) => (menu.value = data));
+let filename = Object.keys(glob)[0];
+
+let menu = undefined;
+if (filename) {
+  menu = glob[filename].default;
+}
 </script>
 
 <template>
-  <ul class="flex list-none gap-4">
+  <ul class="flex list-none gap-4" v-if="menu">
     <li class="" v-for="(item, index) in menu" :key="index">
       <a :href="item.link.url">{{ item.link.title }}</a>
     </li>

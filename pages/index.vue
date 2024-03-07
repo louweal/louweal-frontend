@@ -1,17 +1,14 @@
 <script setup>
-import { ref } from "vue";
-const page = ref(null);
+const glob = import.meta.glob("@/assets/data/pages/5.json", {
+  eager: true,
+});
 
-let id = 5;
+let filename = Object.keys(glob)[0];
 
-fetch(`http://louweal.local/wp-json/wp/v2/pages/${id}?acf_format=standard`)
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    }
-    throw new Error("Something went wrong");
-  })
-  .then((data) => (page.value = data));
+let page = undefined;
+if (filename) {
+  page = glob[filename].default;
+}
 </script>
 
 <template>
@@ -29,8 +26,6 @@ fetch(`http://louweal.local/wp-json/wp/v2/pages/${id}?acf_format=standard`)
             v-else-if="section.acf_fc_layout === 'projects'"
             :data="section"
           />
-
-          <!-- <Tools v-else-if="section.acf_fc_layout === 'tools'" :data="section" /> -->
 
           <Contact
             v-else-if="section.acf_fc_layout === 'contact'"
