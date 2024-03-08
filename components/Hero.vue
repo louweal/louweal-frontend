@@ -9,11 +9,11 @@ defineProps(["data"]);
 
       <div class="row pb-4">
         <div class="box lg:box-5">
-          <p v-html="data.content" />
+          <div v-html="data.content" />
         </div>
       </div>
 
-      <HyperLink class="btn" :data="data.link" />
+      <Button class="btn" :data="data.link" />
     </div>
   </div>
 </template>
@@ -22,6 +22,6 @@ defineProps(["data"]);
 :deep(h2) {
   font-size: 1rem;
   font-weight: 300;
-  color: var(--color-secondary);
+  /* color: var(--color-secondary); */
 }
 </style>

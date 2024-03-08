@@ -2,14 +2,9 @@
   <header class="header fixed w-screen">
     <div class="header__bg absolute left-0 top-0 h-full w-screen"></div>
     <div class="flex justify-between px-6 pt-6 lg:px-6">
-      <div class="">
+      <div class="logo">
         <nuxt-link to="/">
-          <img
-            src="@/assets/images/logo.svg"
-            alt="home"
-            width="134"
-            height="38"
-          />
+          <span class="font-bold">Home</span>
         </nuxt-link>
       </div>
       <div class="flex">
@@ -35,6 +30,25 @@
     );
   }
 }
+
+.logo {
+  line-height: 2;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  &:hover {
+    border-color: var(--color-light);
+  }
+}
+
+@keyframes pingpong {
+  from {
+  }
+  to {
+  }
+}
+
 .hamburger {
   --width: 2rem;
   --gap: 0.65rem;

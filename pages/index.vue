@@ -1,14 +1,5 @@
 <script setup>
-const glob = import.meta.glob("@/assets/data/pages/5.json", {
-  eager: true,
-});
-
-let filename = Object.keys(glob)[0];
-
-let page = undefined;
-if (filename) {
-  page = glob[filename].default;
-}
+import page from "@/assets/data/pages/5.json";
 </script>
 
 <template>

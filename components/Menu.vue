@@ -1,14 +1,5 @@
 <script setup>
-const glob = import.meta.glob("@/assets/data/menus/menu.json", {
-  eager: true,
-});
-
-let filename = Object.keys(glob)[0];
-
-let menu = undefined;
-if (filename) {
-  menu = glob[filename].default;
-}
+import menu from "@/assets/data/menus/menu.json";
 </script>
 
 <template>

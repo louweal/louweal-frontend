@@ -8,21 +8,23 @@ defineProps(["data"]);
       <div class="box md:box-6 mb-8 self-center md:mb-0">
         <h2>{{ data.title }}</h2>
 
-        <div v-html="data.content" />
+        <Editor :data="data.content" />
 
-        <ul
-          class="inline list-none"
-          v-for="(skill, index) in data.skills"
-          :key="index"
-        >
-          <li>{{ skill.skill }}</li>
-        </ul>
+        <div class="row gap-y-0">
+          <div
+            class="box box-6 sm:box-4"
+            v-for="(skill, index) in data.skills"
+            :key="index"
+          >
+            <div class="skill">{{ skill.skill }}</div>
+          </div>
+        </div>
       </div>
       <div
         class="box-10 offset-1 sm:box-8 sm:offset-2 md:box-5 md:offset-1 xl:box-5 self-center"
       >
         <div class="img-c">
-          <img :src="data.image.sizes['medium']" :alt="data.image.alt" />
+          <img :src="data.image.sizes['medium_large']" :alt="data.image.alt" />
         </div>
       </div>
     </div>
@@ -56,6 +58,32 @@ defineProps(["data"]);
     border-radius: 0.3rem;
     transform: rotate(2deg);
     border: 6px solid var(--color-secondary);
+  }
+}
+
+.skill {
+  padding-left: 1.3rem;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 300;
+    color: var(--color-secondary);
+  }
+
+  &::before {
+    content: "•";
+    left: 0;
+    font-size: 0.75rem;
+    padding-top: 0.187rem;
+  }
+
+  &::after {
+    content: "›";
+    left: 0.3rem;
   }
 }
 </style>

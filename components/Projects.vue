@@ -3,7 +3,7 @@ defineProps(["data"]);
 </script>
 
 <template>
-  <div v-if="data" class="row h-screen py-10">
+  <div v-if="data" class="row h-screen py-10" id="projecten">
     <div class="box self-center">
       <h2>{{ data.title }}</h2>
 
@@ -21,3 +21,5 @@ defineProps(["data"]);
     </div>
   </div>
 </template>
+
+<style scoped></style>
