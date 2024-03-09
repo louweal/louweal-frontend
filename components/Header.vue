@@ -4,7 +4,7 @@
     <div class="flex justify-between px-8 pt-6 lg:px-6">
       <div class="logo">
         <nuxt-link to="/">
-          <span class="font-bold">Home</span>
+          <span class="font-bold">Anneloes Louwe</span>
         </nuxt-link>
       </div>
       <div class="flex">

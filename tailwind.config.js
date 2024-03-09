@@ -13,6 +13,7 @@ export default {
     extend: {
       colors: {
         light: "var(--color-light)",
+        dark: "var(--color-dark)",
       },
     },
     container: {

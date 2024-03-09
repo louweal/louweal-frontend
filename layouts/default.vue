@@ -1,7 +1,7 @@
 <template>
   <main>
     <Cursor />
-    <Sparkles />
+    <Background />
 
     <Header />
 

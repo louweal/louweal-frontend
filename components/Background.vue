@@ -1,5 +1,5 @@
 <template>
-  <div class="sparkles fixed left-0 top-0 h-screen w-screen">
+  <div class="background fixed left-0 top-0 h-screen w-screen">
     <sparkle-dots v-for="i in 50" :key="i" />
     <sparkle-dots v-for="j in 50" :min="66" :key="'j' + j" />
     <sparkle-dots v-for="k in 50" :min="33" :key="'k' + k" />
@@ -21,7 +21,7 @@
 </template>
 
 <style scoped>
-.sparkles {
+.background {
   z-index: -1;
   background-color: var(--color-dark);
   background: linear-gradient(

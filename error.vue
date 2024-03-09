@@ -10,7 +10,7 @@ const handleError = () => clearError({ redirect: "/" });
 
 <template>
   <main>
-    <Sparkles />
+    <Background />
     <Header />
 
     <div class="container">

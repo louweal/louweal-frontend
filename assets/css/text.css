@@ -28,5 +28,9 @@ a:not(.btn) {
   transition: color 0.3s linear;
   &:hover {
     color: var(--color-white);
+
+    .icon {
+      filter: invert(100%);
+    }
   }
 }
