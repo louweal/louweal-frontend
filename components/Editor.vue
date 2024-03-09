@@ -11,5 +11,13 @@ defineProps(["data"]);
   :deep(p) {
     margin-bottom: 1rem;
   }
+
+  :deep(a) {
+    color: var(--color-white);
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
 }
 </style>

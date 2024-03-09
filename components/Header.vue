@@ -1,7 +1,7 @@
 <template>
   <header class="header fixed w-screen">
     <div class="header__bg absolute left-0 top-0 h-full w-screen"></div>
-    <div class="flex justify-between px-6 pt-6 lg:px-6">
+    <div class="flex justify-between px-8 pt-6 lg:px-6">
       <div class="logo">
         <nuxt-link to="/">
           <span class="font-bold">Home</span>
@@ -77,7 +77,7 @@
     display: block;
     width: 100%;
     height: 0.125rem;
-    background-color: #fff;
+    background-color: var(--color-white);
     border-radius: 50em;
     transition: all 0.15s 0.1s ease-in;
   }

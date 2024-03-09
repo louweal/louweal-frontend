@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Cursor />
     <Sparkles />
 
     <Header />
@@ -10,11 +11,8 @@
           <NuxtPage />
         </div>
         <div class="box sm:box-1 sm:order-1">
-          <div class="fixed flex h-screen flex-col justify-center">
-            <ul>
-              <li>1</li>
-              <li>2</li>
-            </ul>
+          <div class="flex justify-center sm:fixed sm:min-h-screen">
+            <SocialIcons />
           </div>
         </div>
       </div>

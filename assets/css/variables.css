@@ -1,0 +1,33 @@
+@custom-media --480 (min-width: 30em);
+@custom-media --xs (min-width: 30em);
+
+@custom-media --640 (min-width: 40em);
+@custom-media --sm (min-width: 40em);
+
+@custom-media --768 (min-width: 48em);
+@custom-media --md (min-width: 48em);
+
+@custom-media --992 (min-width: 62em);
+
+@custom-media --1024 (min-width: 64em);
+@custom-media --lg (min-width: 64em);
+
+@custom-media --1280 (min-width: 80em);
+@custom-media --xl (min-width: 80em);
+
+@custom-media --1536 (min-width: 96em);
+@custom-media --2xl (min-width: 96em);
+
+@custom-media --1600 (min-width: 100em);
+@custom-media --3xl (min-width: 100em);
+
+:root {
+  --color-primary: #027683;
+  --color-secondary: #e7d2cf;
+  --color-light: #c8cecc;
+  --color-dark: #03333f;
+  --color-white: #ffffff;
+  --color-accent: #6dbebf;
+  --font-heading: "Ubuntu", Arial, sans-serif;
+  --font-body: "Ubuntu", sans-serif;
+}

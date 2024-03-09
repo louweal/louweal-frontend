@@ -8,6 +8,22 @@ export const getData = (glob) => {
   return undefined;
 };
 
+// very ugly and inefficient but there isn't an alternative?!
+// glob should get ALL forms
+export const getFormData = (glob, formId) => {
+  const form = {};
+  Object.keys(glob).forEach((key) => {
+    const filename = key.match(/([^/]+)\.json$/)[1];
+    form[filename] = glob[key].default;
+  });
+
+  if (form[formId]) {
+    return form[formId];
+  }
+
+  return undefined;
+};
+
 // usage:
 // import { getData } from "@/utils/getData";
 

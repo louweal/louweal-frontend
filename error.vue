@@ -14,7 +14,7 @@ const handleError = () => clearError({ redirect: "/" });
     <Header />
 
     <div class="container">
-      <div class="row h-screen flex-col justify-between py-4">
+      <div class="row min-h-screen flex-col justify-between py-4">
         <div></div>
         <div class="text-center">
           <h2>{{ error.statusCode }}</h2>

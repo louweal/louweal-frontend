@@ -1,0 +1,32 @@
+:--headings {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: var(--color-white);
+  font-weight: bold;
+
+  @media (--1024) {
+    font-size: 6rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  /* color: var(--color-accent); */
+}
+
+a:not(.btn) {
+  transition: color 0.3s linear;
+  &:hover {
+    color: var(--color-white);
+  }
+}

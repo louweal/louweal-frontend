@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -6,10 +7,14 @@ export default {
     "./pages/**/*.vue",
     // "./plugins/**/*.{js,ts}",
     // "./app.vue",
-    // "./error.vue",
+    "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        light: "var(--color-light)",
+      },
+    },
     container: {
       center: true,
       padding: "1rem",
@@ -21,5 +26,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // require("@tailwindcss/forms")
+  ],
 };
