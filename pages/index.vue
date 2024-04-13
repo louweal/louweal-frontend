@@ -18,10 +18,10 @@ import page from "@/assets/data/pages/5.json";
             :data="section"
           />
 
-          <Contact
+          <!-- <Contact
             v-else-if="section.acf_fc_layout === 'contact'"
             :data="section"
-          />
+          /> -->
         </div>
       </div>
     </div>

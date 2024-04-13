@@ -8,8 +8,8 @@
         </nuxt-link>
       </div>
       <div class="flex">
-        <Menu class="hidden lg:flex" />
-        <div class="hamburger lg:hidden"><span></span></div>
+        <!-- <Menu class="hidden lg:flex" /> -->
+        <!-- <div class="hamburger lg:hidden"><span></span></div> -->
       </div>
     </div>
   </header>

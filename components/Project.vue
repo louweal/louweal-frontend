@@ -14,7 +14,7 @@ defineProps(["data"]);
         <div
           v-for="(tool, index) in data.stack"
           :key="index"
-          class="text-light whitespace-nowrap font-bold text-white"
+          class="whitespace-nowrap font-bold text-light text-white"
         >
           {{ tool.item }}
         </div>
@@ -31,7 +31,7 @@ defineProps(["data"]);
       </a>
 
       <a :href="data.site" class="flex gap-x-2">
-        <Icon name="globe" class="h-6 w-6" /> Live site
+        <Icon name="globe" class="h-6 w-6" /> Website
       </a>
     </div>
   </div>

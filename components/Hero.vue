@@ -5,7 +5,7 @@ defineProps(["data"]);
 <template>
   <div v-if="data" class="flex min-h-screen flex-col justify-center">
     <div>
-      <div v-html="data.title" class="text-light pb-4" />
+      <div v-html="data.title" class="pb-4 text-light" />
 
       <div class="row pb-4">
         <div class="box lg:box-5">

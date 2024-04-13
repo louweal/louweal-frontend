@@ -1,5 +1,20 @@
 <script setup>
-defineProps(["data"]);
+import { reactive, computed } from "vue";
+
+const props = defineProps(["data"]);
+
+// const state = reactive({
+//   firstName: 'John',
+//   lastName: 'Doe'
+// });
+// const sizes = ['thumbnail','medium','medium_large', 'large'];
+//     for(size in sizes) {
+//     }
+
+const mediumLarge = computed(() => {
+  return `/images/uploads/${props.data.image.sizes.medium_large.split("/uploads")[1]}`;
+  //   return `/images/uploads/solution-kantoor.png`;
+});
 </script>
 
 <template>
@@ -29,10 +44,13 @@ defineProps(["data"]);
       >
         <div class="about__visuals">
           <img
-            :src="data.hover_image.sizes['medium_large']"
+            :src="`/images/uploads/${props.data.hover_image.sizes.medium_large.split('/uploads')[1]}`"
             :alt="data.image.alt"
           />
-          <img :src="data.image.sizes['medium_large']" :alt="data.image.alt" />
+          <img
+            :src="`/images/uploads/${props.data.image.sizes.medium_large.split('/uploads')[1]}`"
+            :alt="data.image.alt"
+          />
         </div>
         <!-- <div class="img-c">
           <img :src="data.image.sizes['medium_large']" :alt="data.image.alt" />
