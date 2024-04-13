@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Cursor />
+    <!-- <Cursor /> -->
     <Background />
 
     <Header />

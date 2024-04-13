@@ -37,7 +37,7 @@ const cursor = ref();
   margin-left: -4.625rem;
   z-index: 30;
   pointer-events: none;
-  background-image: url("~/assets/svg/cursor.svg");
+  /* background-image: url("~/assets/svg/cursor.svg"); */
   background-repeat: no-repeat;
   background-size: cover;
   animation: rotate 4.5s linear infinite;
