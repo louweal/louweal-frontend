@@ -114,6 +114,7 @@ const mediumLarge = computed(() => {
   padding-left: 1.3rem;
   position: relative;
   transition: color 0.3s linear;
+  cursor: default;
 
   &:hover {
     color: var(--color-white);
